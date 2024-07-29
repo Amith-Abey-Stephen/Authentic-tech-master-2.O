@@ -16,6 +16,5 @@ document.addEventListener('DOMContentLoaded', function() {
     } else {
         console.error("Hamburger or nav-links not found"); // Add this line for debugging
     }
+    
 });
-
-
