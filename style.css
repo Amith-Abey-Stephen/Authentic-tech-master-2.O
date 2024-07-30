@@ -8,7 +8,8 @@
 }
 
 .div1 {
-    background-image: url(https://github.com/user-attachments/assets/6c6ecba3-deaf-41a4-88f8-87230af4caae);
+    background-image: url(/assets/istockphoto-1452323336-612x612.jpg);
+    
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -25,7 +26,6 @@
     align-items: center;
     opacity: 0;
     animation: navbarUp 1s ease-in-out forwards;
-    
 }
 
 .logo img {
@@ -89,7 +89,8 @@
     background-color: white;
 }
 .about{
-    background-image: url(https://github.com/user-attachments/assets/9c5ff16e-78a5-4f61-963c-baca19a7e98f);
+    /* background-image: url(https://github.com/user-attachments/assets/9c5ff16e-78a5-4f61-963c-baca19a7e98f); */
+    background-image: url(/assets/ship_1-vmake.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
