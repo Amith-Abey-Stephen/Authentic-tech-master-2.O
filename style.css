@@ -144,6 +144,169 @@
     font-weight: 600;
 }
 
+
+/* Footer */
+
+.footer {
+    background: linear-gradient(to bottom right, #1e1e1e, #3a3a3a);
+    color: #fff;
+    padding: 2rem 1rem;
+}
+
+#pirate_head{
+    width: 2rem;
+}
+
+#locate{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+    /* background-image: linear-gradient(to right, rgb(31, 31, 31), rgb(37, 37, 37), rgb(43, 43, 43));  */
+    color: white;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.map-container{
+    text-align: center;
+}
+
+#map{
+    width: 60rem;
+    height: 42rem;
+    /* visibility: hidden; */
+}
+
+.contacttextdiv{
+    display: flex;
+}
+
+#contacttextsubdiv1{
+    margin-left: 1rem;
+}
+
+#contacttextsubdiv2{
+    margin-left: 17rem;
+}
+
+#address{
+    margin-top: 0.2rem;
+}
+
+a{
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-decoration: none;
+    margin-left: 1rem;
+}
+
+#contactno{
+    margin-top: 0.2rem;
+    text-align: left;
+}
+
+.contacticon{
+    width: 1.3rem;
+}
+
+.footer-top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.footer-logo img {
+    height: 3rem;
+}
+
+.footer-sections {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-section h2 {
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: #dcdcdc;
+}
+
+.footer-section .disabled {
+    color: #888;
+}
+
+.divider {
+    border: 1px solid #666;
+    margin: 2rem 0;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-bottom span {
+    font-size: 0.875rem;
+}
+
+.footer-bottom a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-bottom a:hover {
+    color: #dcdcdc;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.icon {
+    height: 1.25rem;
+    width: 1.25rem;
+    fill: #fff;
+    transition: fill 0.3s ease;
+}
+
+.social-links a:hover .icon {
+    fill: #dcdcdc;
+}
+
+
 @media screen and (max-width: 768px) {
     .logo img{
         padding-left: 0em;
