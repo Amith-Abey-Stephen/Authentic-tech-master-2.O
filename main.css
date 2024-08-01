@@ -13,8 +13,8 @@
 }
 
 body{
-    background: red;
     /* overflow-x: hidden; */
+    width: 100%;
 }
 
 #home{
@@ -23,7 +23,6 @@ body{
     background-repeat: no-repeat;
     background-size:cover;
     height: 100vh;
-    width: 100vw;
     background-attachment: fixed;   
     display: flex;
     justify-content: center;
@@ -65,23 +64,27 @@ body{
 
 
 .navbar {
-    padding: 2em;
-    display: flex;
+    padding: 1em;
+    /* display: flex; */
     justify-content: space-between;
     align-items: center;
-    animation: navbarUp 1s ease-in-out forwards;
+    /* animation: navbarUp 1s ease-in-out forwards; */
     
 }
 
+
+
 nav .logo{
     height: 5em;
-    padding: 0 2em 0 2em;
+    margin-top: -1.7rem;
+    /* padding: 0 2em 0 2em; */
 }
 
 .nav-links {
     display: flex;
     list-style: none;
     margin-top: 1.5em;
+    /* background-color: aqua; */
 }
 
 .nav-links a {
@@ -93,13 +96,16 @@ nav .logo{
     font-family: 'Roboto',sans-serif;
 }
 
-.nav-btn{
-    padding-right: 2em;
-    margin-top: 1.2em;
-
+#homenav{
+    margin-left: 16rem;
 }
 
-.nav-btn button {
+#regbutton{
+    padding-left: 17em;
+    /* margin-top: 1.2em; */
+}
+
+#regbutton button {
     background-color: white;
     color: black;
     padding: 0.5em 2em;
@@ -163,7 +169,7 @@ nav .logo{
     }
 
     .nav-item {
-        margin: 1.5rem 0;
+        margin: 1.5rem;
     }
     .nav-links li{
         padding: 0.5em;
