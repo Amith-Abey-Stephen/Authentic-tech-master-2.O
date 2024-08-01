@@ -8,9 +8,8 @@
 }
 
 .div1 {
-    background-image: url(/assets/istockphoto-1452323336-612x612.jpg);
-    
-    background-position: center;
+    background-image: url(/assets/ship_4.png);
+    /* background-position: center; */
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
