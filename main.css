@@ -62,17 +62,70 @@ body{
     color: white;
 }
 
+#about{
+    height: fit-content;
+    display: flex;
+}
+
+.about{
+    text-align: center;
+    /* background-color: aqua; */
+    width: 40rem;
+    height: fit-content;
+    margin-top: 10rem;
+    flex: 1 1 calc(50% - 1rem); /* 50% width minus the gap */
+    box-sizing: border-box; /* Ensure padding and border are included in width */
+    opacity: 0;
+    text-align: center; 
+    padding: 5rem;
+}
+
+.about:nth-child(1).visible {
+    transform: translateX(100px);
+    transition: opacity 2.5s ease, transform 1s ease;
+    -webkit-transform: translateX(100px);
+    -webkit-transition: opacity 2.5s ease, transform 1s ease;
+}
+
+.about:nth-child(2).visible {
+    transform: translateX(-100px);
+    transition: opacity 2.5s ease, transform 1s ease;
+    -webkit-transform: translateX(-100px);
+    -webkit-transition: opacity 2.5s ease, transform 1s ease;
+}
+
+.about.visible{
+    opacity: 1;
+}
+
+#about-event{
+    margin-left: 10rem;
+    margin-top: 40rem;
+}
+
+#myHeader{
+    background-color: #000;
+}
 
 .navbar {
     padding: 1em;
     /* display: flex; */
     justify-content: space-between;
     align-items: center;
+    opacity: 1;
+    background-color: #000;
     /* animation: navbarUp 1s ease-in-out forwards; */
     
 }
 
+.navbar.sticky {
+    opacity: 1;
+    background-color: #000;
+}
 
+.nav-item{
+    background-color: #000;
+}
 
 nav .logo{
     height: 5em;
@@ -134,7 +187,8 @@ nav .logo{
     display: none;
     cursor: pointer;
 }
-.bar {/*  lines of hamburger*/
+
+.bar {
     display: block;
     width: 25px;
     height: 3px;
@@ -142,6 +196,19 @@ nav .logo{
     transition: all 0.3s ease-in;
     background-color: white;
 }
+
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
 
 
 
