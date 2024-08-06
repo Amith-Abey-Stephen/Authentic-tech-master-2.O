@@ -46,4 +46,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Initial check on page load
     checkVisibility();
+    // document.addEventListener('scroll', function() {
+    //     const ship = document.querySelector('.ship');
+    //     const scrollPosition = window.scrollY || window.pageYOffset;
+    //     const shipSpeed = 0.5; // Adjust speed as needed
+        
+    //     ship.style.transform = `translateY(-50%) translateX(${scrollPosition * shipSpeed}px)`;
+    // });
 });
