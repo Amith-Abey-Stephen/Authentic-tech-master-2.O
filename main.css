@@ -62,17 +62,71 @@ body{
     color: white;
 }
 
+#about{
+    height: fit-content;
+    display: flex;
+}
+
+.about{
+    text-align: center;
+    /* background-color: aqua; */
+    width: 40rem;
+    height: fit-content;
+    margin-top: 10rem;
+    flex: 1 1 calc(50% - 1rem); /* 50% width minus the gap */
+    box-sizing: border-box; /* Ensure padding and border are included in width */
+    opacity: 0;
+    text-align: center; 
+    padding: 5rem;
+}
+
+.about:nth-child(1).visible {
+    transform: translateX(100px);
+    transition: opacity 2.5s ease, transform 1s ease;
+    -webkit-transform: translateX(100px);
+    -webkit-transition: opacity 2.5s ease, transform 1s ease;
+}
+
+.about:nth-child(2).visible {
+    transform: translateX(-100px);
+    transition: opacity 2.5s ease, transform 1s ease;
+    -webkit-transform: translateX(-100px);
+    -webkit-transition: opacity 2.5s ease, transform 1s ease;
+}
+
+.about.visible{
+    opacity: 1;
+}
+
+#about-event{
+    margin-left: 10rem;
+    margin-top: 40rem;
+}
+
+#myHeader{
+    background-color: #000;
+    z-index: 1000;
+}
 
 .navbar {
     padding: 1em;
     /* display: flex; */
     justify-content: space-between;
     align-items: center;
+    opacity: 1;
+    background-color: #000;
     /* animation: navbarUp 1s ease-in-out forwards; */
     
 }
 
+.navbar.sticky {
+    opacity: 1;
+    background-color: #000;
+}
 
+.nav-item{
+    background-color: #000;
+}
 
 nav .logo{
     height: 5em;
@@ -134,13 +188,123 @@ nav .logo{
     display: none;
     cursor: pointer;
 }
-.bar {/*  lines of hamburger*/
+
+.bar {
     display: block;
     width: 25px;
     height: 3px;
     margin: 5px auto;
     transition: all 0.3s ease-in;
     background-color: white;
+}
+
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* 
+            #////#    ##///#    /####/    //////    ///###    /####/    /#####    //////
+            /####/    #/###/    /####/    /#####    /##/##    /####/    /#####    /#####
+            #/####    /#####    /####/    /#####    /###/#    /####/    /#####    /#####
+            ###/##    /#####    //////    ////##    /####/    /####/    /#####    ////##
+            ####/#    /#####    /####/    /#####    /###/#    /####/    /#####    /#####
+            /####/    #/###/    /####/    /#####    /##/##    #/##/#    /#####    /#####
+            #////#    ##///#    /####/    //////    ///###    ##//##    //////    //////
+   
+                                                                                                */
+
+#schedulesec {
+    position: relative;
+    height: fit-content;
+    background-color: #000;
+}
+
+.schedule-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: fit-content;
+}
+
+
+.ship-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.ship {
+    position: absolute;
+    top: 3rem;
+    z-index: 3;
+    transform: translateY(-50%);
+    width: 4rem; /* Adjust size as needed */
+    transition: transform 0.3s linear;
+}
+
+.schedule-content {
+    position: relative;
+    padding: 2em;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    height: 100vh;
+    /* overflow: hidden;  */
+}
+
+.schedule-content h2{
+    margin-top: 10rem;
+}
+
+.events {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem; 
+    flex-direction: row;
+    height: fit-content;
+    width: max-content;
+    /* overflow: hidden; */
+}
+
+.event {
+    /* flex: 1 1 calc(50% - 2rem);  */
+    /* background: rgba(0, 0, 0, 0.7); */
+    color: white;
+    padding: 1rem; /* Adjust padding if necessary */
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box; /* Ensure padding/border are included in width/height */
+    height: min-content; 
+    list-style-type: none;
+}
+
+
+/* .event ul li:nth-child(odd){
+    justify-self: start;
+    margin-bottom: 5rem;
+    margin-top: 5rem;
+}
+
+.event:nth-child(even){
+    justify-self: end;
+    margin-bottom: 5rem;
+    margin-top: 15rem;
+    text-align: end;
+} */
+
+.event h3 {
+    margin: 0;
+}
+
+.event p {
+    margin: 0.5em 0;
 }
 
 
