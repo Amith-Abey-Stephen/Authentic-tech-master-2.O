@@ -13,7 +13,6 @@
 }
 
 html, body {
-    scroll-behavior: smooth;
     margin: 0;
     padding: 0;
 
@@ -22,7 +21,7 @@ html, body {
 body {
     margin: 0;
     padding: 0;
-    /* overflow-x: hidden; */
+    overflow-x: hidden; 
     background-color: #000;
 }
 
@@ -236,36 +235,15 @@ nav .logo{
                                                                                                 */
 
 #schedulesec {
-    position: relative;
-    height: 110vh;
+    /* position: relative; */
+    height: fit-content;
+    width: 100%;
     background-color: #000;
-    overflow-x: hidden; /* Enable horizontal scrolling */
-    overflow-y: hidden; /* Disable vertical scrolling by default */
-    white-space: nowrap; /* Prevent line breaks */
-    scrollbar-width: thin;
-    scrollbar-color: #666 #333;
-}
-
-/* WebKit browser scrollbar styling */
-#schedulesec::-webkit-scrollbar {
-    width: 16px;
-}
-
-#schedulesec::-webkit-scrollbar-track {
-    background: #333;
-}
-
-#schedulesec::-webkit-scrollbar-thumb {
-    background: #666;
-    border-radius: 8px;
-}
-
-#schedulesec::-webkit-scrollbar-thumb:hover {
-    background: #888;
+    /* white-space: nowrap;  */
 }
 
 .schedule-container {
-    display: inline-flex;
+    /* display: inline-flex; */
     height: fit-content;
     width: max-content;
 }
@@ -287,45 +265,45 @@ nav .logo{
 }
 
 .schedule-content {
-    position: relative;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;     /* Center vertically */
+    height: fit-content;
+    width: 100vw;            /* Full viewport width */
     padding: 2em;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgb(0, 0, 0);
     color: white;
-    height: 100vh;
-}
-
-.schedule-content h2 {
-    margin-top: 10rem;
 }
 
 .events {
     display: flex;
-    flex-wrap: nowrap; /* Prevent wrapping to maintain horizontal scroll */
-    gap: 2rem; 
-    height: fit-content;
-    width: max-content;
-    /* overflow: hidden; */
+    flex-direction: column;
+    gap: 2rem;
+    width: 60rem;             /* Fixed width for content */
+    max-width: 100%;          /* Ensures responsiveness */
+    margin-right: 14rem;
 }
+
 
 .event {
     color: white;
     padding: 1rem;
     border-radius: 8px;
     list-style-type: none;
-    display: inline-block;
 }
-/* .event ul li:nth-child(odd){
+
+.event ul li:nth-child(odd) {
     justify-self: start;
     margin-bottom: 5rem;
     margin-top: 5rem;
 }
 
-.event:nth-child(even){
+.event:nth-child(even) {
     justify-self: end;
     margin-bottom: 5rem;
     margin-top: 15rem;
     text-align: end;
-} */
+}
 
 .event h3 {
     margin: 0;
@@ -334,6 +312,8 @@ nav .logo{
 .event p {
     margin: 0.5em 0;
 }
+
+
 
 
 
