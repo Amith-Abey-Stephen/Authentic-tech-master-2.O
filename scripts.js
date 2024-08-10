@@ -2,34 +2,51 @@ document.addEventListener('DOMContentLoaded', function() {
     const schedulesec = document.getElementById('schedulesec');
     const body = document.body;
     const scrollThreshold = 10; // Adjust this value as needed
+    const verticalScrollAmount = 100; // Adjust vertical scroll amount as needed
+    const scrollDuration = 200; // Duration of smooth scroll in milliseconds
 
-    function updateScrollBehavior() {
-        // Check if the horizontal scroll is at or near the left edge
-        if (schedulesec.scrollLeft <= scrollThreshold) {
-            // At the left edge, hide horizontal scrollbar and enable vertical scrolling
-            schedulesec.style.overflowX = 'hidden';
-            body.style.overflowY = 'auto';
-        } else {
-            // Not at the left edge, enable horizontal scrollbar and disable vertical scrolling
-            schedulesec.style.overflowX = 'scroll';
-            body.style.overflowY = 'hidden';
-        }
+    // Smooth scroll function
+    function smoothScroll(element, to, duration) {
+        const start = element.scrollLeft;
+        const startTime = performance.now();
+        const scroll = (currentTime) => {
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            element.scrollLeft = start + (to - start) * progress;
+            if (progress < 1) {
+                requestAnimationFrame(scroll);
+            }
+        };
+        requestAnimationFrame(scroll);
     }
-
-    // Scroll event listener for horizontal scroll behavior
-    schedulesec.addEventListener('scroll', updateScrollBehavior);
 
     // Handle horizontal scrolling with the mouse wheel
     schedulesec.addEventListener('wheel', (event) => {
         if (event.deltaY !== 0) {
             // Scroll horizontally based on vertical mouse wheel movement
-            schedulesec.scrollLeft += event.deltaY;
+            const newScrollLeft = schedulesec.scrollLeft + event.deltaY;
+            const maxScrollLeft = schedulesec.scrollWidth - schedulesec.clientWidth;
+
+            smoothScroll(schedulesec, newScrollLeft, scrollDuration);
+
+            // Check if the horizontal scroll is at or near the left or right edge
+            if (newScrollLeft <= scrollThreshold) {
+                // At the left edge, scroll vertically up
+                window.scrollBy({
+                    top: -verticalScrollAmount,
+                    behavior: 'smooth'
+                });
+            } else if (newScrollLeft >= maxScrollLeft - scrollThreshold) {
+                // At the right edge, scroll vertically down
+                window.scrollBy({
+                    top: verticalScrollAmount,
+                    behavior: 'smooth'
+                });
+            }
+
             event.preventDefault(); // Prevent default vertical scroll
         }
     });
-
-    // Initialize scroll behavior
-    updateScrollBehavior();
 
     // Sticky navbar functionality
     window.onscroll = function() {
