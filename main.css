@@ -235,15 +235,15 @@ nav .logo{
                                                                                                 */
 
 #schedulesec {
-    /* position: relative; */
+    position: relative;
     height: fit-content;
     width: 100%;
     background-color: #000;
-    /* white-space: nowrap;  */
+    white-space: nowrap; 
 }
 
 .schedule-container {
-    /* display: inline-flex; */
+    display: inline-flex;
     height: fit-content;
     width: max-content;
 }
@@ -258,7 +258,7 @@ nav .logo{
 .ship {
     position: absolute;
     top: 3rem;
-    z-index: 3;
+    z-index: 1000;
     transform: translateY(-50%);
     width: 4rem; /* Adjust size as needed */
     transition: transform 0.3s linear;
@@ -266,23 +266,40 @@ nav .logo{
 
 .schedule-content {
     display: flex;
+    flex-direction: column; /* Ensure vertical layout */
     justify-content: center; /* Center horizontally */
-    align-items: center;     /* Center vertically */
+    align-items: center; /* Center vertically */
     height: fit-content;
-    width: 100vw;            /* Full viewport width */
+    width: 100vw; /* Full viewport width */
     padding: 2em;
+    top: 5rem;
     background: rgb(0, 0, 0);
     color: white;
+    box-sizing: border-box; /* Include padding in width/height calculation */
+}
+
+.schedule-content h2 {
+    margin-bottom: 2rem; /* Add margin to create space between h2 and events */
+    font-size: 2rem; /* Adjust as needed */
+}
+
+.vertical-line {
+    width: 1px;
+    background-color: white;
+    position: sticky;
+    left: 50%;
+    top: 0;
+    height: 100vh;
 }
 
 .events {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    width: 60rem;             /* Fixed width for content */
-    max-width: 100%;          /* Ensures responsiveness */
-    margin-right: 14rem;
+    width: 60rem; /* Fixed width for content */
+    max-width: 100%; /* Ensures responsiveness */
 }
+
 
 
 .event {

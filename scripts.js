@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
             } 
         });
     }
-
+    
     // Event listener for scroll and resize to check visibility
     window.addEventListener("scroll", checkVisibility);
     window.addEventListener("resize", checkVisibility);
