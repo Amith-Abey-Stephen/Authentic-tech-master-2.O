@@ -1,12 +1,56 @@
 document.addEventListener('DOMContentLoaded', function() {
+    const schedulesec = document.getElementById('schedulesec');
+    const body = document.body;
+    const scrollThreshold = 10; // Adjust this value as needed
+
+    function updateScrollBehavior() {
+        // Check if the horizontal scroll is at or near the left edge
+        if (schedulesec.scrollLeft <= scrollThreshold) {
+            // At the left edge, hide horizontal scrollbar and enable vertical scrolling
+            schedulesec.style.overflowX = 'hidden';
+            body.style.overflowY = 'auto';
+        } else {
+            // Not at the left edge, enable horizontal scrollbar and disable vertical scrolling
+            schedulesec.style.overflowX = 'scroll';
+            body.style.overflowY = 'hidden';
+        }
+    }
+
+    // Scroll event listener for horizontal scroll behavior
+    schedulesec.addEventListener('scroll', updateScrollBehavior);
+
+    // Handle horizontal scrolling with the mouse wheel
+    schedulesec.addEventListener('wheel', (event) => {
+        if (event.deltaY !== 0) {
+            // Scroll horizontally based on vertical mouse wheel movement
+            schedulesec.scrollLeft += event.deltaY;
+            event.preventDefault(); // Prevent default vertical scroll
+        }
+    });
+
+    // Initialize scroll behavior
+    updateScrollBehavior();
+
+    // Sticky navbar functionality
+    window.onscroll = function() {
+        const header = document.getElementById("myHeader");
+        const sticky = header.offsetTop;
+
+        if (window.pageYOffset > sticky) {
+            header.classList.add("sticky");
+        } else {
+            header.classList.remove("sticky");
+        }
+    };
+
+    // Hamburger menu functionality
     const hamburger = document.querySelector(".navbar .hamburger");
     const navLinks = document.querySelector(".navbar .nav-links");
-    const aboutitems = document.querySelectorAll("#about div");
+
     if (hamburger && navLinks) {
         hamburger.addEventListener("click", () => {
             hamburger.classList.toggle("active");
             navLinks.classList.toggle("active");
-            console.log("Hamburger clicked"); // Add this line for debugging
         });
 
         document.querySelectorAll(".navbar .nav-links li").forEach(n => n.addEventListener("click", () => {
@@ -14,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function() {
             navLinks.classList.remove("active");
         }));
     } else {
-        console.error("Hamburger or nav-links not found"); // Add this line for debugging
+        console.error("Hamburger or nav-links not found");
     }
 
     // Function to check if element is in viewport
@@ -30,13 +74,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Function to loop through service items and add visible class if in viewport
     function checkVisibility() {
-        aboutitems.forEach(item => {
+        document.querySelectorAll("#aboutus .about").forEach(item => {
             if (isInViewport(item)) {
                 item.classList.add("visible");
             } 
-            // else {
-            //     item.classList.remove("visible");
-            // }
         });
     }
 
@@ -46,11 +87,4 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Initial check on page load
     checkVisibility();
-    // document.addEventListener('scroll', function() {
-    //     const ship = document.querySelector('.ship');
-    //     const scrollPosition = window.scrollY || window.pageYOffset;
-    //     const shipSpeed = 0.5; // Adjust speed as needed
-        
-    //     ship.style.transform = `translateY(-50%) translateX(${scrollPosition * shipSpeed}px)`;
-    // });
 });

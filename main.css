@@ -12,21 +12,34 @@
     padding: 0;
 }
 
-body{
-    /* overflow-x: hidden; */
-    width: 100%;
+html, body {
+    margin: 0;
+    padding: 0;
+
 }
 
-#home{
+body {
+    margin: 0;
+    padding: 0;
+    /* overflow-x: hidden; */
+    background-color: #000;
+}
+
+
+#home, #aboutus{
+    width: 100%;
+    overflow-x: hidden; /* Hide horizontal scroll for these sections */
+}
+
+#home {
     background-image: url(/assets/ship_4.png);
-    /* background-position: center; */
     background-repeat: no-repeat;
-    background-size:cover;
+    background-size: cover;
     height: 100vh;
-    background-attachment: fixed;   
+    background-attachment: fixed;
     display: flex;
     justify-content: center;
-
+    align-items: center; /* Center content vertically */
 }
 
 #home .logo{
@@ -225,13 +238,35 @@ nav .logo{
     position: relative;
     height: fit-content;
     background-color: #000;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    overflow-y: hidden; /* Disable vertical scrolling by default */
+    white-space: nowrap; /* Prevent line breaks */
+    scrollbar-width: thin;
+    scrollbar-color: #666 #333;
+}
+
+/* WebKit browser scrollbar styling */
+#schedulesec::-webkit-scrollbar {
+    width: 16px;
+}
+
+#schedulesec::-webkit-scrollbar-track {
+    background: #333;
+}
+
+#schedulesec::-webkit-scrollbar-thumb {
+    background: #666;
+    border-radius: 8px;
+}
+
+#schedulesec::-webkit-scrollbar-thumb:hover {
+    background: #888;
 }
 
 .schedule-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: inline-flex;
     height: fit-content;
+    width: max-content;
 }
 
 
@@ -256,36 +291,28 @@ nav .logo{
     background: rgba(0, 0, 0, 0.7);
     color: white;
     height: 100vh;
-    /* overflow: hidden;  */
 }
 
-.schedule-content h2{
+.schedule-content h2 {
     margin-top: 10rem;
 }
 
 .events {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap; /* Prevent wrapping to maintain horizontal scroll */
     gap: 2rem; 
-    flex-direction: row;
     height: fit-content;
     width: max-content;
     /* overflow: hidden; */
 }
 
 .event {
-    /* flex: 1 1 calc(50% - 2rem);  */
-    /* background: rgba(0, 0, 0, 0.7); */
     color: white;
-    padding: 1rem; /* Adjust padding if necessary */
+    padding: 1rem;
     border-radius: 8px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-sizing: border-box; /* Ensure padding/border are included in width/height */
-    height: min-content; 
     list-style-type: none;
+    display: inline-block;
 }
-
-
 /* .event ul li:nth-child(odd){
     justify-self: start;
     margin-bottom: 5rem;
