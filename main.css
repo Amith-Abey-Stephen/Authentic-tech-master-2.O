@@ -48,6 +48,10 @@ body {
     margin-left: -16em;
 }
 
+#toplogo{
+    margin-top: -35rem
+}
+
 .title{
     max-height: 20em;
     margin-top: 7em;
