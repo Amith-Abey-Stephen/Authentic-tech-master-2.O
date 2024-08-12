@@ -1,35 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const schedulesec = document.getElementById('schedulesec');
-    const body = document.body;
-    const scrollThreshold = 10; // Adjust this value as needed
-
-    function updateScrollBehavior() {
-        // Check if the horizontal scroll is at or near the left edge
-        if (schedulesec.scrollLeft <= scrollThreshold) {
-            // At the left edge, hide horizontal scrollbar and enable vertical scrolling
-            schedulesec.style.overflowX = 'hidden';
-            body.style.overflowY = 'auto';
-        } else {
-            // Not at the left edge, enable horizontal scrollbar and disable vertical scrolling
-            schedulesec.style.overflowX = 'scroll';
-            body.style.overflowY = 'hidden';
-        }
-    }
-
-    // Scroll event listener for horizontal scroll behavior
-    schedulesec.addEventListener('scroll', updateScrollBehavior);
-
-    // Handle horizontal scrolling with the mouse wheel
-    schedulesec.addEventListener('wheel', (event) => {
-        if (event.deltaY !== 0) {
-            // Scroll horizontally based on vertical mouse wheel movement
-            schedulesec.scrollLeft += event.deltaY;
-            event.preventDefault(); // Prevent default vertical scroll
-        }
-    });
-
-    // Initialize scroll behavior
-    updateScrollBehavior();
 
     // Sticky navbar functionality
     window.onscroll = function() {
@@ -80,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
             } 
         });
     }
-
+    
     // Event listener for scroll and resize to check visibility
     window.addEventListener("scroll", checkVisibility);
     window.addEventListener("resize", checkVisibility);
