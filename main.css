@@ -274,13 +274,12 @@ nav .logo{
     flex-direction: column; /* Ensure vertical layout */
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
-    height: fit-content;
     width: 100vw; /* Full viewport width */
-    padding: 2em;
-    top: 5rem;
-    background: rgb(0, 0, 0);
+    padding: 4em;
+    background-image: url(https://github.com/user-attachments/assets/8171faeb-f85e-4c36-bce4-dc9d9111d85a);
     color: white;
     box-sizing: border-box; /* Include padding in width/height calculation */
+    z-index: 1;
 }
 
 .schedule-content h2 {
@@ -295,14 +294,17 @@ nav .logo{
     left: 50%;
     top: 0;
     height: 100vh;
+    margin-top: 9em;
 }
+
 
 .events {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    /* gap: 1rem; */
     width: 60rem; /* Fixed width for content */
     max-width: 100%; /* Ensures responsiveness */
+    /* margin-top: -35em; */
 }
 
 
@@ -311,19 +313,21 @@ nav .logo{
     color: white;
     padding: 1rem;
     border-radius: 8px;
+    margin-top: 2em;
     list-style-type: none;
+    z-index: 1;
 }
 
 .event ul li:nth-child(odd) {
     justify-self: start;
     margin-bottom: 5rem;
-    margin-top: 5rem;
+    margin-top: 3rem;
 }
 
 .event:nth-child(even) {
     justify-self: end;
     margin-bottom: 5rem;
-    margin-top: 15rem;
+    margin-top: 10rem;
     text-align: end;
 }
 
@@ -335,9 +339,63 @@ nav .logo{
     margin: 0.5em 0;
 }
 
+.vertical-line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 2px;
+    transform: translateX(-50%);
+}
 
+.event {
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
 
+/* Sponsor Section */
+#sponsor {
+    padding: 4em 0;
+    background: #000;
+    color: white;
+    text-align: center;
+}
 
+#sponsor h2 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.sponsor-container {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.sponsor-slider {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.sponsor-slide {
+    display: flex;
+    animation: slide 20s linear infinite;
+}
+
+.sponsor-slide img {
+    width: 10rem;
+    margin: 0 3rem;
+    object-fit: contain;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
 
 
 @media screen and (max-width: 768px) {
