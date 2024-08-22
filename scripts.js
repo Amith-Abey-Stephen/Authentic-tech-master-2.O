@@ -115,3 +115,4 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initial call to set up the animations
     handleScroll();
 });
+
