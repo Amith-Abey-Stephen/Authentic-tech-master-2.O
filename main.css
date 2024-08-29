@@ -22,7 +22,7 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden; 
-    background-color: #000;
+    background-color: #000000;
 }
 
 
@@ -121,7 +121,7 @@ body {
 }
 
 #myHeader{
-    background-color: #000;
+    background-color: #0000002d;
     z-index: 1000;
 }
 
@@ -131,18 +131,18 @@ body {
     justify-content: space-between;
     align-items: center;
     opacity: 1;
-    background-color: #000;
+    background-color: #00000000;
     /* animation: navbarUp 1s ease-in-out forwards; */
     
 }
 
 .navbar.sticky {
     opacity: 1;
-    background-color: #000;
+    background-color: #00000000;
 }
 
 .nav-item{
-    background-color: #000;
+    background-color: #00000000;
 }
 
 nav .logo{
