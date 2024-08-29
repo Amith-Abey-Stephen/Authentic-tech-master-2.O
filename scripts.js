@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Vertical line animation
         const progress = (scrollPosition - sectionTop) / sectionHeight;
         const lineHeight = Math.min(Math.max(progress * 100, 0), 85);
-        const adjustedLineHeight = lineHeight + 6;
+        const adjustedLineHeight = lineHeight + 3;
         verticalLine.style.height = `${adjustedLineHeight}%`;
         
 
@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (isElementInViewport(event)) {
                 const delay = index * 100; // Stagger the animations
                 setTimeout(() => {
-                    event.style.opacity = '1';
+                    event.style.opacity = '2';
                     event.style.transform = 'translateX(0)';
                 }, delay);
             }

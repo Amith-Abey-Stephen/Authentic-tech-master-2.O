@@ -89,7 +89,7 @@ body {
     /* background-color: aqua; */
     width: 40rem;
     height: fit-content;
-    margin-top: 10rem;
+    margin-top: 3rem;
     flex: 1 1 calc(50% - 1rem); /* 50% width minus the gap */
     box-sizing: border-box; /* Ensure padding and border are included in width */
     opacity: 0;
@@ -117,7 +117,7 @@ body {
 
 #about-event{
     margin-left: 10rem;
-    margin-top: 40rem;
+    margin-top: 20rem;
 }
 
 #myHeader{
@@ -126,7 +126,7 @@ body {
 }
 
 .navbar {
-    padding: 0.5em;
+    padding: 0.2em;
     /* display: flex; */
     justify-content: space-between;
     align-items: center;
@@ -162,7 +162,7 @@ nav .logo{
 .nav-links a {
     text-decoration: none;
     color: white;
-    padding: 1em;
+    padding: 0.5em;
     font-weight: 700;
     font-size: 16px;
     font-family: 'Roboto',sans-serif;
@@ -253,20 +253,29 @@ nav .logo{
     width: max-content;
 }
 
-
+/* 
 .ship-container {
     position: absolute;
     width: 100%;
     height: 100%;
-}
-
+} */
+/* 
 .ship {
     position: absolute;
     top: 3rem;
     z-index: 1000;
     transform: translateY(-50%);
-    width: 4rem; /* Adjust size as needed */
+    width: 4rem; Adjust size as needed
     transition: transform 0.3s linear;
+} */
+.schedule-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.401); /* Adjust opacity here */
+    z-index: 0; /* Ensure it's behind other elements */
 }
 
 .schedule-content {
@@ -275,8 +284,9 @@ nav .logo{
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
     width: 100vw; /* Full viewport width */
-    padding: 4em;
-    background-image: url(https://github.com/user-attachments/assets/8171faeb-f85e-4c36-bce4-dc9d9111d85a);
+    padding-top: 5em;
+    padding-bottom: 2em;
+    background: linear-gradient(rgb(2, 48, 92),black);
     color: white;
     box-sizing: border-box; /* Include padding in width/height calculation */
     z-index: 1;
@@ -290,11 +300,15 @@ nav .logo{
 .vertical-line {
     width: 1px;
     background-color: white;
-    position: sticky;
+    /* position: sticky; */
     left: 50%;
     top: 0;
     height: 100vh;
-    margin-top: 9em;
+    margin-top: 11.5em;
+    position: fixed; /* Change to fixed for better scrolling effect */
+    width: 2px;
+    transform: translateX(-50%);
+    z-index: -1; 
 }
 
 
@@ -305,6 +319,11 @@ nav .logo{
     width: 60rem; /* Fixed width for content */
     max-width: 100%; /* Ensures responsiveness */
     /* margin-top: -35em; */
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 
@@ -316,40 +335,52 @@ nav .logo{
     margin-top: 2em;
     list-style-type: none;
     z-index: 1;
+        background-color: rgba(0, 0, 0, 0);
+    border: 1px solid #dddddd1e;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.312);
+    box-sizing: border-box;
+    transition: transform 0.2s;
+    z-index: 1;
 }
 
 .event ul li:nth-child(odd) {
-    justify-self: start;
-    margin-bottom: 5rem;
-    margin-top: 3rem;
+    margin-bottom: 4rem;
+    margin-top: 2rem;
 }
 
 .event:nth-child(even) {
-    justify-self: end;
-    margin-bottom: 5rem;
-    margin-top: 10rem;
+    justify-self: center;
+    margin-bottom: 4rem;
+    margin-top: 6rem;
     text-align: end;
 }
 
 .event h3 {
     margin: 0;
+    text-align: center
 }
 
 .event p {
+    text-align: center;
     margin: 0.5em 0;
+    align-items: center;
+    justify-content: center;
 }
 
 .vertical-line {
     position: absolute;
-    left: 50%;
+    left: 15%;
     top: 0;
     width: 2px;
     transform: translateX(-50%);
+    z-index: -1; 
+
 }
 
 .event {
     opacity: 0;
-    transition: opacity 0.5s ease, transform 0.5s ease;
+    transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
 /* Sponsor Section */
@@ -358,6 +389,7 @@ nav .logo{
     background: #000;
     color: white;
     text-align: center;
+    margin-top: 3em;
 }
 
 #sponsor h2 {
