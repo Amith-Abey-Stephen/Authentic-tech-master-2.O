@@ -32,7 +32,8 @@ body {
 }
 
 #home {
-    background-image: url(https://github.com/user-attachments/assets/8171faeb-f85e-4c36-bce4-dc9d9111d85a);
+    /* background-image: url(https://github.com/user-attachments/assets/8171faeb-f85e-4c36-bce4-dc9d9111d85a); */
+    background-image:  url(https://github.com/user-attachments/assets/1bdcca10-bce5-4696-b410-b22988e29152);
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
@@ -75,7 +76,7 @@ body {
 
 /* About Section */
 #aboutus{
-    background: linear-gradient(black,rgb(2, 48, 92));
+    background: linear-gradient(rgb(0, 0, 0),rgb(2, 64, 92));
     color: white;
 }
 
@@ -286,7 +287,7 @@ nav .logo{
     width: 100vw; /* Full viewport width */
     padding-top: 5em;
     padding-bottom: 2em;
-    background: linear-gradient(rgb(2, 48, 92),black);
+    background: linear-gradient(rgb(2, 64, 92),black);
     color: white;
     box-sizing: border-box; /* Include padding in width/height calculation */
     z-index: 1;
