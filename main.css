@@ -346,12 +346,13 @@ nav .logo{
 }
 
 .event ul li:nth-child(odd) {
+    justify-content: flex-start;
     margin-bottom: 4rem;
     margin-top: 2rem;
 }
 
 .event:nth-child(even) {
-    justify-self: center;
+    justify-content: end;
     margin-bottom: 4rem;
     margin-top: 6rem;
     text-align: end;

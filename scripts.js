@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Event animations based on the vertical line's height
         events.forEach((event, index) => {
-            const eventPosition = (index + 1) / events.length * 85; // Map event position to the vertical line height (0-85%)
+            const eventPosition = (index + 0.2) / events.length * 85; // Map event position to the vertical line height (0-85%)
             if (lineHeight >= eventPosition) {
                 event.style.opacity = '1';
                 event.style.transform = 'translateX(0)';
