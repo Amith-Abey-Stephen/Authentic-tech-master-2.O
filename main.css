@@ -336,7 +336,7 @@ nav .logo{
     margin-top: 2em;
     list-style-type: none;
     z-index: 1;
-        background-color: rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0);
     border: 1px solid #dddddd1e;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.312);
@@ -783,3 +783,170 @@ a{
     }
 }
 
+/* Existing styles remain the same */
+
+/* ... (keep all the existing CSS rules) ... */
+
+/* Responsive styles */
+@media screen and (max-width: 1200px) {
+    .events {
+        width: 90%;
+    }
+
+    #homenav {
+        margin-left: 8rem;
+    }
+
+    #regbutton {
+        padding-left: 8em;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    #home .logo {
+        margin-left: -8em;
+    }
+
+    .title {
+        max-height: 15em;
+    }
+
+    .registernow {
+        margin: 3em 0 0 10em;
+    }
+
+    #about {
+        flex-direction: column;
+    }
+
+    .about {
+        width: 80%;
+        margin: 2rem auto;
+    }
+
+    #about-event {
+        margin-left: 0;
+        margin-top: 2rem;
+    }
+
+    .vertical-line {
+        left: 50%;
+    }
+
+    .event:nth-child(even) {
+        margin-top: 2rem;
+    }
+
+    #map {
+        width: 90%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #home .logo {
+        margin-left: 0;
+    }
+
+    .title {
+        max-height: 12em;
+        margin-top: 3em;
+    }
+
+    .registernow {
+        margin: 2em auto 0;
+        font-size: 16px;
+    }
+
+    .nav-links {
+        position: fixed;
+        left: -100%;
+        top: 5.5rem;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.9);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .nav-links.active {
+        left: 0;
+    }
+
+    .nav-item {
+        margin: 1rem 0;
+    }
+
+    #homenav {
+        margin-left: 0;
+    }
+
+    #regbutton {
+        padding-left: 0;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .events {
+        width: 95%;
+    }
+
+    .event {
+        width: 100%;
+    }
+
+    .contacttextdiv {
+        flex-direction: column;
+    }
+
+    #contacttextsubdiv2 {
+        margin-left: 1rem;
+        margin-top: 1rem;
+    }
+
+    .footer-top {
+        flex-direction: column;
+    }
+
+    .footer-sections {
+        margin-top: 2rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    #home {
+        height: 80vh;
+    }
+
+    #toplogo {
+        margin-top: -20rem;
+    }
+
+    .title {
+        max-height: 10em;
+    }
+
+    .registernow {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+    .about {
+        padding: 2rem;
+    }
+
+    .event {
+        padding: 0.5rem;
+    }
+
+    .sponsor-slide img {
+        width: 8rem;
+        margin: 0 1.5rem;
+    }
+
+    .footer-section {
+        min-width: 100%;
+    }
+}
