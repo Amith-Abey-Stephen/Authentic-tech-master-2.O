@@ -59,19 +59,17 @@ body {
 }
 
 .registernow{
-    background: linear-gradient(320deg, #181313,#000);
+    /* background: linear-gradient(320deg, #181313,#000); */
+    /* border: none; */
+    background: transparent;
+    border: 2px white solid;
+    border-radius: 4px;
     color: white;
     font-weight: 600;
     font-size: 20px;
-    border: none;
     padding: 10px 15px 10px 15px;
     display: block;
-    margin: 5em 0 0 20em;
-}
-.registernow:hover{
-    border: 2px white solid;
-    border-radius: 4px;
-    background: transparent;
+    margin: 4em 0 0 19em;
 }
 
 /* About Section */
