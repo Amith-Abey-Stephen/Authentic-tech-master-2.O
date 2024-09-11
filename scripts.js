@@ -43,10 +43,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Function to loop through service items and add visible class if in viewport
     function checkVisibility() {
-        document.querySelectorAll("#aboutus .about").forEach(item => {
+        document.querySelectorAll("#about .about-content").forEach(item => {
             if (isInViewport(item)) {
                 item.classList.add("visible");
             }
+            // else {console.log("Error loading something")}
+
         });
     }
 
@@ -59,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     // Schedule section functionality
-    const scheduleSection = document.getElementById('schedulesec');
+    const scheduleSection = document.getElementById('schedule');
     const events = document.querySelectorAll('.event');
     const verticalLine = document.querySelector('.vertical-line');
 

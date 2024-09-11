@@ -9,14 +9,14 @@
 </head>
 
 <body>
-    
+
     <section id="home">
         <!-- /assets/inovuslabs.png -->
-        <img src="https://github.com/user-attachments/assets/3d51ee50-29f4-49ca-8a42-a83054bab5d1" alt="" class="logo" id="toplogo">
+        <img class="logo" id="toplogo" src="https://github.com/user-attachments/assets/3d51ee50-29f4-49ca-8a42-a83054bab5d1" alt="" >
 
         <div class="main-text">
             <!-- /assets/authentic tech master.png -->
-            <img src="https://github.com/user-attachments/assets/96e05262-2ff5-4e41-b279-83c915e5227d" alt="" class="title">
+            <img class="title" src="https://github.com/user-attachments/assets/96e05262-2ff5-4e41-b279-83c915e5227d" alt="" >
             <button class="registernow">Register Now</button>
         </div>
     </section>
@@ -26,15 +26,38 @@
         <div class="nav-item">  
             <ul class="nav-links">
                 <!-- /assets/inovuslabs.png -->
-                <li id="logo"><a href="https://inovuslabs.org/"><img src="https://github.com/user-attachments/assets/762df71f-d8e6-4bb2-9291-50dc7b49796e" alt="logo" class="logo"></a></li>
-                <li id="homenav"><a href="#home">Home</a></li>
-                <li><a href="#aboutus">About US</a></li>
-                <li><a href="#schedulesec">Schedule</a></li>
-                <li><a href="#sponsor">Sponsors</a></li>
-                <li><a href="#contact">Conatct</a></li>
-                <li id="regbutton"><a href="#"></a><button>Register</button></a></li>
+                <li id="logo">
+                    <a href="https://inovuslabs.org/">
+                        <img  class="navlogo" src="https://github.com/user-attachments/assets/762df71f-d8e6-4bb2-9291-50dc7b49796e" alt="logo">
+                    </a>
+                </li>
+
+                <li id="homenav">
+                    <a href="#home">Home</a>
+                </li>
+
+                <li>
+                    <a href="#about">About US</a>
+                </li>
+                
+                <li>
+                    <a href="#schedulesec">Schedule</a>
+                </li>
+                
+                <li>
+                    <a href="#sponsor">Sponsors</a>
+                </li>
+                
+                <li>
+                    <a href="#contact">Conatct</a>
+                </li>
+                
+                <li id="regbutton">
+                    <a href="#"><button>Register</button></a>
+                </li>
             </ul>
         </div>
+        
         <div class="hamburger">
             <span class="bar"></span>
             <span class="bar"></span>
@@ -42,9 +65,9 @@
         </div>
     </nav>
 
-    <section id="aboutus">
-        <div id="about">
-            <div class="about">
+    <section id="about">
+        <div id="about-container">
+            <div class="about-content">
                 <div class="about-head">
                     <h2>About Us</h2>
                 </div>
@@ -55,7 +78,7 @@
 
             </div>
 
-            <div class="about" id="about-event">
+            <div class="about-content" id="about-event">
                 <div class="event-head">
                     <h2>About Event</h2>
                 </div>
@@ -67,86 +90,76 @@
         </div>
     </section>
 
-
     <!-- Schedule -->
-    <section id="schedulesec">
-        <div class="schedule-container">
-            <div class="ship-container">
-                <!-- /assets/ship_4.png -->
-                <!-- <img src="https://github.com/user-attachments/assets/8171faeb-f85e-4c36-bce4-dc9d9111d85a" alt="Moving Ship" class="ship"> -->
-            </div>
-
-            <div class="schedule-background"></div>
-
+    <section id="schedule">
             <div class="schedule-content" id="schedule">
                 <h2>Event Schedule</h2>
+
                 <div class="vertical-line"></div>
-                    <ul class="events">
+            
+                <ul class="events">
+                    <li class="event">
+                        <h3>CHECK IN</h3>
+                        <p>Time:- 02:30 pm</p>
+                        <p>Participants need to reach on time</p>
+                    </li>
 
-                        <li class="event">
-                            <h3>CHECK IN</h3>
-                            <p>Time:- 02:30 pm</p>
-                            <p>Participants need to reach on time</p>
-                        </li>
+                    <li class="event">
+                        <h3>Authentic Tech Masters 2.O starts</h3>
+                        <p>Date: November 1, 2024</p>
+                        <p>Inauguration, Speech, Instruction. At 3:00 pm</p>
+                    </li>
 
-                        <li class="event">
-                            <h3>Authentic Tech Masters 2.O starts</h3>
-                            <p>Date: November 1, 2024</p>
-                            <p>Inauguration, Speech, Instruction. At 3:00 pm</p>
-                        </li>
+                    <li class="event">
+                        <h3>Hackathon Starts</h3>
+                        <p>Date: November 1, 2024</p>                        
+                        <p>Starting the work at 4:00 pm</p>
+                    </li>
 
-                        <li class="event">
-                            <h3>Hackathon Starts</h3>
-                            <p>Date: November 1, 2024</p>                        
-                            <p>Starting the work at 4:00 pm</p>
-                        </li>
+                    <li class="event">
+                        <h3>Event 4</h3>
+                        <p>Date: August 15, 2024</p>
+                        <p>Details about Event 2.</p>
+                    </li>
 
-                        <li class="event">
-                            <h3>Event 4</h3>
-                            <p>Date: August 15, 2024</p>
-                            <p>Details about Event 2.</p>
-                        </li>
+                    <li class="event">
+                        <h3>Event 5</h3>
+                        <p>Date: August 15, 2024</p>
+                        <p>Details about Event 2.</p>
+                    </li>
 
-                        <li class="event">
-                            <h3>Event 5</h3>
-                            <p>Date: August 15, 2024</p>
-                            <p>Details about Event 2.</p>
-                        </li>
+                    <li class="event">
+                        <h3>Event 6</h3>
+                        <p>Date: August 10, 2024</p>
+                        <p>Details about Event 1.</p>
+                    </li>
 
-                        <li class="event">
-                            <h3>Event 6</h3>
-                            <p>Date: August 10, 2024</p>
-                            <p>Details about Event 1.</p>
-                        </li>
+                    <li class="event">
+                        <h3>Event 7</h3>
+                        <p>Date: August 15, 2024</p>
+                        <p>Details about Event 2.</p>
+                    </li>
 
-                        <li class="event">
-                            <h3>Event 7</h3>
-                            <p>Date: August 15, 2024</p>
-                            <p>Details about Event 2.</p>
-                        </li>
+                    <li class="event">
+                        <h3>Event 8</h3>
+                        <p>Date: August 15, 2024</p>
+                        <p>Details about Event 2.</p>
+                    </li>
 
-                        <li class="event">
-                            <h3>Event 8</h3>
-                            <p>Date: August 15, 2024</p>
-                            <p>Details about Event 2.</p>
-                        </li>
+                    <li class="event">
+                        <h3>Event 9</h3>
+                        <p>Date: August 15, 2024</p>
+                        <p>Details about Event 2.</p>
+                    </li>
 
-                        <li class="event">
-                            <h3>Event 9</h3>
-                            <p>Date: August 15, 2024</p>
-                            <p>Details about Event 2.</p>
-                        </li>
-
-                        <li class="event">
-                            <h3>Event 10</h3>
-                            <p>Date: August 15, 2024</p>
-                            <p>Details about Event 2.</p>
-                        </li>
-                        
-                    </ul>
-                </div>
+                    <li class="event">
+                        <h3>Event 10</h3>
+                        <p>Date: August 15, 2024</p>
+                        <p>Details about Event 2.</p>
+                    </li>
+                    
+                </ul>
             </div>
-        </div>
     </section>
     
     <!-- Sponsors Section -->
